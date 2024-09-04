@@ -1,0 +1,7 @@
+{
+  "allowJs": true,
+  "checkJs": true,
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
