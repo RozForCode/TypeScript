@@ -15,6 +15,7 @@ b = "hello" as any; // although should be avoided in ts
 
 // creating custom types with interface
 // unlike most ts features that get stripped away at compile time  enum get compilled along with your code
+// better auto completion and err messages
 enum ContactStatus {
     Active = "Active",
     Inactive = "Inactive",
