@@ -14,10 +14,17 @@ b = "hello" as any; // although should be avoided in ts
 
 
 // creating custom types with interface
+// unlike most ts features that get stripped away at compile time  enum get compilled along with your code
+enum ContactStatus {
+    Active = "Active",
+    Inactive = "Inactive",
+    New = "New"
+}
 interface Contact extends Address {
     id: number;
-    name?: string;
+    name?: ContactName;
     birthDate: Date;
+    status: ContactStatus;
 }
 interface Address {
     line1?: string;
@@ -27,5 +34,10 @@ interface Address {
 let primaryContact: Contact = {
     birthDate: new Date("01-01-1980"),
     id: 123,
+    status: ContactStatus.Active,
     // name: "Jamie Johnsom", ? makes it optional
 }
+
+
+// type aliasing - giving different name to already existing types using the keyword type
+type ContactName = string;//can be used interchangeably
