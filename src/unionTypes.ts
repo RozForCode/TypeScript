@@ -21,3 +21,11 @@ function getBirthdate(union: union) {
  * }
  */
 //
+// to combine interfaces we can use the extend keyword but there's another way
+// extends can have multiple interfaces
+// or when there's a situation when not defined any additional fields
+
+// type AddressContact = Contact & Address // name of interfaces
+
+// using type aliasing we can remove enums from our code
+
