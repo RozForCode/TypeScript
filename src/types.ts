@@ -31,6 +31,7 @@ interface Address {
     line1?: string;
     line2?: string;
 }
+// we can make arrays of interfaces as well like const a: interface[] = []
 
 let primaryContact: Contact = {
     birthDate: new Date("01-01-1980"),
