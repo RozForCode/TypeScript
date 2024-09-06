@@ -24,7 +24,7 @@ enum ContactStatus {
 interface Contact extends Address {
     id: number;
     name?: ContactName;
-    birthDate: Date;
+    birthDate?: Date;
     status: ContactStatus;
 }
 interface Address {
