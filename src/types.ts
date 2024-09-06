@@ -33,12 +33,12 @@ interface Address {
 }
 // we can make arrays of interfaces as well like const a: interface[] = []
 
-let primaryContact: Contact = {
-    birthDate: new Date("01-01-1980"),
-    id: 123,
-    status: ContactStatus.Active,
-    // name: "Jamie Johnsom", ? makes it optional
-}
+// let primaryContact: Contact = {
+//     birthDate: new Date("01-01-1980"),
+//     id: 123,
+//     status: ContactStatus.Active,
+//     // name: "Jamie Johnsom", ? makes it optional
+// }
 
 
 // type aliasing - giving different name to already existing types using the keyword type
