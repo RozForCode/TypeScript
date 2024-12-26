@@ -9,4 +9,13 @@ let f:[number,string,boolean] = [1,"string",false];
 
 // unknown type - similar to any 
 // never - never used... for something like infinite loops like error and code stops compiling
+// void - for functions that return nothing
 
+// ENUMS
+enum Direction{
+    up="UP",
+    left="LEFT",
+    down="DOWN",
+    right="RIGHT"
+}
+console.log(Direction.down+Direction.right)
