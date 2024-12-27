@@ -21,9 +21,34 @@ enum Direction{
 console.log(Direction.down+Direction.right)
 
 // type inference - when variables get initialized at declaration ts infers the type of the variable ... thats kind of all
-// union and intersection types - giving two or more types to a variable to avoid errors
+// union types - giving two or more types to a variable to avoid errors
 let variable:string | null; // now vs autosuggestion for functions will only show functions that are common to both types
 // to handle that use check typeof
 // if(typeof variable === 'string'){
 //     //inside this block all suggestion for string will appear
 // }
+// this inside a function
+
+function abcd(variable: number | string){
+    if(typeof variable ==='number'){
+        variable.toFixed(2);
+    }
+    console.log(variable);
+}
+abcd(variable);
+
+// intersection types
+let q:number|string; // union - either of these
+type Class = {
+    section:string
+}
+type Students = {
+    name:string
+}
+type Classmates = Class & Students;
+// example of interseciton variable .... properties name need to be the same
+let A: Classmates = {
+    name:"abdc",
+    section:"100"
+
+}

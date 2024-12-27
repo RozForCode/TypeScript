@@ -5,9 +5,7 @@ function authorize(role: string) {
 
         descriptor.value = function (...args: any[]) {
             // Check if the user is authenticated
-            if (!currentUser.isAuthenticated()) {
-                throw new Error('User not logged in');
-            }
+            
 
             // Check if the user has the required role
             if (!currentUser.isInRole(role)) {
