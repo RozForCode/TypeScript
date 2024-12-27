@@ -197,9 +197,16 @@ function names(...names:string[]){
 export const PI = 3.14;
 // to import this import {PI} from "./scripts.ts"
 
-// Type Assertions and Literal Types
+// Type Assertions 
 function BIJ(para:HTMLDivElement){// OR HTMLPARAElement - basically whatever type of element it is use that more specific the better
     // (document.querySelector("p") as  HTMLParagraphElement).after
     // or 
     // <HTMLParagraphElement>document.querySelector("p").after
 }
+
+// Literals Types - string, boolean, number
+let kj: "Navrose";
+// kj = "whatever" -- error
+
+let PI_small : 3.14 | 3.15;
+// PI_small= 3.15;------ no error
