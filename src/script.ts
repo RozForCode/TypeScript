@@ -144,3 +144,45 @@ const result =  (():string=>{
 return ('hello')
 })();
 console.log(result)
+
+
+// example of complex anonymous function
+type Employee = {
+    id:number;
+    name:string;
+}
+const users: Employee[] = [
+    {id:1,name:"Alice"},
+    {id:2, name:"Greg"}
+];
+
+function processEmployees(
+    employees: Employee[],//first argument normal employee type array
+    processor: (employee:Employee)=> Partial<Employee> // second argument function that takes employee type variable and returns part of that variable
+): Partial<Employee>[]{
+    return employees.map(processor);
+}// processEmployees function takes Employee type variable and return same array but with partial of original values.. that partial being decided by the anonymous or any function provided
+
+let anonymizedUsers : Partial<Employee>[];
+anonymizedUsers = processEmployees(users, (anything)=>{
+    return {
+        id:anything.id
+    };
+})
+console.log(anonymizedUsers);
+
+
+// working with optional parameters
+function consent(name:string,age?:number,gender?:string){
+     let a = `Name: ${name}`;
+     if(age) a+= ` Age: ${age}`
+     if(gender) a+= ` Gender: ${gender}`
+     console.log(a)
+}
+// working with default parameters
+function consent2(name:string,age?:number,gender:string="Prefer not to say"){
+     let a = `Name: ${name}`;
+     if(age) a+= ` Age: ${age}`
+     a+= ` Gender: ${gender}`
+     console.log(a)
+}
