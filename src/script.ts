@@ -72,4 +72,27 @@ let B: CityInState={
 // tsc --watch -realtime compiling
 
 
-// Type Aliases
+// Type Aliases - primitive - making types using primitive data types and object-examples above
+// primitive
+type BigNum = number;
+// object
+type Human = {
+    Name:string,
+    Age:string,
+}
+
+// Interfaces
+interface User{
+    name:string,
+    username:string,
+    age:number
+}
+interface User{
+    email:string
+}
+interface SeriousUser extends User{
+    premiumId:boolean
+}
+function getUser(user:SeriousUser){
+    user.name.charAt(0);
+}
