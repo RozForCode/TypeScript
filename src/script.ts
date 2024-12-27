@@ -96,3 +96,26 @@ interface SeriousUser extends User{
 function getUser(user:SeriousUser){
     user.name.charAt(0);
 }
+
+// Classes 
+class Airpod{
+    // no need to use keywords like let, function
+    price = 25000;
+    image="images/airpod"
+    discount(x:number){
+        console.log(this.price-((x/100)*this.price))
+    }
+    playMusic(Music:string){
+        console.log(Music);
+    }
+}
+
+// Class extends similar to interface
+// Class with constructors
+class Pendrive{
+    public company:string;
+    // only variables declared above the constructor can be initialized
+    constructor(company:string){
+        this.company = company;
+    }
+}
