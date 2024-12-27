@@ -115,7 +115,32 @@ class Airpod{
 class Pendrive{
     public company:string;
     // only variables declared above the constructor can be initialized
-    constructor(company:string){
+    // or use membership keyword/access modifiers (default public) in the construtor argument 
+    constructor(company:string, public price:number){
         this.company = company;
+        this.price = 25000;
     }
 }
+// protected variable can be used in extended classes
+// cool function example
+function greeter(fn:(a:string)=> void):void{
+    fn("Hello, World");
+}
+// readonly properties
+class ABcd{
+    constructor(public readonly name:string){// name value cannot be changed but can be accessed anywhere i.e not set method
+        this.name = name;
+    }
+}
+// named, anonymous, arrow , explicit/implicit return types/ option/default parameters, rest parameters
+
+function xor():void{
+console.log('hello')
+}
+
+// example of anonymous function invoked immediately
+
+const result =  (():string=>{
+return ('hello')
+})();
+console.log(result)
