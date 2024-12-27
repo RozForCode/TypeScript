@@ -50,5 +50,26 @@ type Classmates = Class & Students;
 let A: Classmates = {
     name:"abdc",
     section:"100"
-
 }
+
+type city = {
+    name:string,
+    population:number
+}
+type State = {
+    Name:string,
+    cities:number
+}
+type CityInState = city & State;
+let B: CityInState={
+    name:"Brampton",
+    Name:"Ontario",
+    population:122222034,
+    cities:120
+}
+// tsc --init -> creates ts.config.json
+// to control where compiled files go change outDir path
+// tsc --watch -realtime compiling
+
+
+// Type Aliases
