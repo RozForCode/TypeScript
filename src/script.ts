@@ -23,3 +23,7 @@ console.log(Direction.down+Direction.right)
 // type inference - when variables get initialized at declaration ts infers the type of the variable ... thats kind of all
 // union and intersection types - giving two or more types to a variable to avoid errors
 let variable:string | null; // now vs autosuggestion for functions will only show functions that are common to both types
+// to handle that use check typeof
+// if(typeof variable === 'string'){
+//     //inside this block all suggestion for string will appear
+// }
