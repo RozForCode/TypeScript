@@ -186,3 +186,20 @@ function consent2(name:string,age?:number,gender:string="Prefer not to say"){
      a+= ` Gender: ${gender}`
      console.log(a)
 }
+
+// REST  parameters - when you don't know the no.of arguments
+function names(...names:string[]){
+    console.log(names);
+}
+
+// Modules - import and export
+
+export const PI = 3.14;
+// to import this import {PI} from "./scripts.ts"
+
+// Type Assertions and Literal Types
+function BIJ(para:HTMLDivElement){// OR HTMLPARAElement - basically whatever type of element it is use that more specific the better
+    // (document.querySelector("p") as  HTMLParagraphElement).after
+    // or 
+    // <HTMLParagraphElement>document.querySelector("p").after
+}
